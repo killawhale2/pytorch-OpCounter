@@ -93,11 +93,12 @@ def profile(model, inputs, custom_ops=None, verbose=True):
 
     total_ops = 0
     total_params = 0
-    for m in model.modules():
+    for n,m in model.named_modules():
         if len(list(m.children())) > 0:  # skip for non-leaf module
             continue
         total_ops += m.total_ops
         total_params += m.total_params
+		  print("Name: {} FLOPS: {} Params: {}.format(n, m.total_ops, m.total_params)) 
 
     total_ops = total_ops.item()
     total_params = total_params.item()
