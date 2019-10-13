@@ -98,7 +98,7 @@ def profile(model, inputs, custom_ops=None, verbose=True):
             continue
         total_ops += m.total_ops
         total_params += m.total_params
-		  print("Name: {} FLOPS: {} Params: {}.format(n, m.total_ops, m.total_params)) 
+		  print("Name: {} FLOPS: {} Params: {}".format(n, m.total_ops, m.total_params)) 
 
     total_ops = total_ops.item()
     total_params = total_params.item()
