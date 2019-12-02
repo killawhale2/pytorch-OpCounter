@@ -9,6 +9,8 @@ logger.setLevel(logging.INFO)
 
 multiply_adds = 1
 
+def count_seq(m, x, y):
+    
 
 def zero_ops(m, x, y):
     m.total_ops += torch.Tensor([int(0)])
